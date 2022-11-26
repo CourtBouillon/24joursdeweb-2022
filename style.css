@@ -1,0 +1,186 @@
+/* Fonts */
+
+@font-face {
+  font-family: ClarityCity;
+  font-weight: 400;
+  src: local("ClarityCity Regular"), local("ClarityCity-Regular"), url(fonts/ClarityCity-Regular.woff2);
+}
+
+@font-face {
+  font-family: ClarityCity;
+  font-weight: 700;
+  src: local("ClarityCity Bold"), local("ClarityCity-Bold"), url(fonts/ClarityCity-Bold.woff2);
+}
+
+@font-face {
+  font-family: ClarityCity;
+  font-style: italic;
+  font-weight: 400;
+  src: local("ClarityCity RegularItalic"), local("ClarityCity-RegularItalic"), url(fonts/ClarityCity-RegularItalic.woff2);
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: local("Inconsolata"), url(fonts/Inconsolata-Regular.woff2);
+}
+
+
+/* Variables */
+
+:root {
+  --black: #333;
+  --grey: #f2f2f1;
+  --red: #e8403a;
+  --white: #fff;
+
+  --code-green: #7ec699;
+  --code-orange: #f7aa04;
+  --code-purple: #cc99cd;
+  --code-red: #f08d49;
+}
+
+
+/* Page Rules */
+
+@page landscape {
+  size: A4;
+}
+
+@page :first {
+  @top-right {
+    content: '';
+  }
+
+  @bottom-right {
+    content: '';
+  }
+}
+
+@page :left {
+  margin: 25mm 25mm 25mm 35mm;
+
+  @top-left {
+    content: string(title);
+    font-size: 11pt;
+  }
+  
+  @bottom-left {
+    content: counter(page)
+  }
+}
+
+@page :right {
+  margin: 25mm 35mm 25mm 25mm;
+
+  @top-right {
+    content: string(title);
+    font-size: 11pt;
+  }
+
+  @bottom-right {
+    content: counter(page)
+  }
+}
+
+
+/* Commom */
+
+html {
+  color: var(--black);
+  font-family: ClarityCity, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+code {
+  background-color: var(--grey);
+  padding: 0.2em;
+}
+
+code, pre {
+  font-family: Inconsolata;
+  line-height: 1.2;
+}
+
+pre {
+  background-color: var(--grey);
+  white-space: pre-wrap;
+}
+
+div .section:not(:first-of-type) {
+  break-before: always;
+}
+
+h1 {
+  font-size: 51pt;
+  line-height: 1.3;
+  string-set: title content(text);
+}
+
+h2 {
+  font-size: 34pt;
+}
+
+ul {
+  break-inside: avoid;
+}
+
+
+/* Header */
+
+.post-aside--end {
+  display: none;
+}
+
+.post-aside--start {
+  font-size: 11pt;
+  margin-bottom: 5em;
+}
+
+.post-meta--author::after, time::after {
+  content: ' − ';
+}
+
+/* Footer */
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+footer div img {
+  float: left;
+}
+
+.post-author-title {
+  font-size: medium;
+}
+
+
+/* Code */
+
+.atrule, .selector {
+  color: var(--code-purple);
+}
+
+.function, .number {
+  color: var(--code-red);
+}
+
+.property {
+  color: var(--code-orange);
+  padding-left: 10mm;
+}
+
+.punctuation {
+  color: var(--black);
+}
+
+.string {
+  color: var(--code-green);
+}

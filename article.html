@@ -1,0 +1,222 @@
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Mettre le web en pages</h1>
+    <div class="post-aside post-aside--start">
+      <p class="post-metas">
+	<span class="post-meta post-meta--author">Lucie Anglade et Guillaume Ayoub</span>
+	<time class="post-meta post-meta--date" datetime="2022-11-24T16:45:02+00:00">24 novembre 2022</time>
+	<span class="post-meta post-meta--length"><span aria-label="Temps de lecture&nbsp;: environ">~</span>&nbsp;8 minutes</span>
+      </p>
+    </div>
+    <div class="post-aside post-aside--end">
+      <p class="post-meta post-meta--share">Partager&nbsp;: <a class="post-share-link post-share-link--facebook fbc-has-badge fbc-UID_1" href="https://www.facebook.com/sharer.php?u=https://www.24joursdeweb.fr/?p=6932" title="Partager cet article sur Facebook" onclick="_gaq.push(['_trackEvent', 'Partage', 'Partager sur Facebook', '']);">Facebook</a><a class="post-share-link post-share-link--twitter" href="http://www.twitter.com/share?text=Mettre le web en pages (via @24joursdeweb)&amp;url=https://www.24joursdeweb.fr/?p=6932" title="Partager cet article sur Twitter" onclick="_gaq.push(['_trackEvent', 'Partage', 'Partager sur Twitter', '']);">Twitter</a></p>
+    </div>
+  </header>
+  <div class="post-entry">
+    <div class="section">
+      <p>
+        Nous sommes Lucie et Guillaume, et comme beaucoup de gens nous travaillons tous les jours avec les technologies du web.
+      </p>
+      <p>
+        Comme beaucoup de gens, nous aimons créer de belles architectures en HTML pour y insérer notre contenu. Comme beaucoup de gens, nous adorons peindre de belles couleurs et construire de belles structures avec nos fichiers CSS.
+      </p>
+      <p>
+        Mais notre travail est un peu différent de celui de beaucoup de gens : nous ne créons pas de sites internet. Notre HTML et notre CSS ne sont pas affichés dans des navigateurs. Ils sont transformés en fichiers PDF pour être imprimés, lus sur des téléphones et des ordinateurs, ou tout simplement archivés.
+      </p>
+      <p>
+        <strong>En d’autres termes, nous mettons littéralement le web en pages.</strong>
+      </p>
+      <p>
+        Comment ? Pourquoi ? Nous allons voir plus en détail que cette idée n’est pas aussi étrange qu’elle en a l’air…
+      </p>
+    </div>
+    <div class="section">
+      <h2>Un peu d’histoire</h2>
+      <p>
+        Soyons francs : utiliser du HTML et du CSS pour créer des fichiers PDF, ce n’était pas notre première idée. Il existe déjà une tonne d’outils pour faire de beaux documents, de Microsoft Word à LaTeX, de LibreOffice Writer à Google Docs, en passant par Adobe InDesign… Ces logiciels sont généralement amplement suffisants pour répondre à une large liste de besoins, qui vont de la simple lettre écrite en deux minutes au magazine prêt à partir à l’impression.
+      </p>
+      <p>
+        Pourtant, il existe un cas auquel tous ces outils sont assez peu adaptés : la génération automatique.
+      </p>
+      <p>
+        Imaginons que vous ayez un site de vente en ligne. Vous adorez créer de superbes bols en céramique que vous présentez au monde entier sur votre boutique. Les clients adorent ce que vous faites, et vous vendez rapidement des dizaines et des dizaines de bols. Bravo ! Les utilisateurs remplissent leur panier, ils entrent les chiffres de leur carte bleue pour payer, et… ils aimeraient bien avoir une facture. Vous n’allez quand même pas écrire toutes vos factures à la main ! La mise en page est toujours la même, mais le contenu varie un peu : désignation, prix, adresse… Comment faire ?
+      </p>
+      <p>
+        La même question se pose si vous développez un site de création de cartes de visite en ligne. Vous aimeriez que vos clients choisissent parmi de nombreux styles différents, dans lesquels ils pourraient modifier les couleurs, les polices de caractères ou le logo. Pareil si vous souhaitez générer des affichettes promotionnelles ou des étiquettes électroniques pour votre magasin. Pareil si vous voulez imprimer des diplômes, des bulletins ou des emplois du temps dans votre école.
+      </p>
+      <p>
+        Bref, vous voyez l’idée 😁️.
+      </p>
+      <p>
+        <strong>C’est là que l’idée d’utiliser les technologies du web pour générer des documents imprimables commence à prendre forme.</strong>
+      </p>
+      <p>
+        Après tout, dans chacun de ces cas, il faut générer à la volée un document dont la structure et la mise en page sont bien définies. Pour afficher du contenu venant d’une base de données, HTML n’a plus ses preuves à faire. Vous avez à disposition une pléthore d’outils, de <em>frameworks</em>, de bibliothèques et autres langages pour créer toutes les pages que vous souhaitez. Et pour mettre en page ce HTML, quoi de mieux que du CSS ? Vous pourrez créer une ou plusieurs feuilles de style selon vos envies, que vous pourrez même personnaliser avec des variables ou un préprocesseur si cela vous chante.
+      </p>
+      <p>
+        D’accord, on voit bien comment tout cela marche pour afficher des pages avec un navigateur. Mais pour un document paginé, très franchement, ce ne serait pas un peu tiré par les cheveux ?
+      </p>
+      <p>
+        À vrai dire, et aussi étonnant que cela puisse paraître, ça ne l’est pas du tout. Et pas uniquement pour générer quelques factures pour vos jolis bols. Il y a même de bonnes chances que vous ayez dans votre bibliothèque, sans le savoir, un livre fait en HTML/CSS ! Les éditeurs restent souvent assez secrets sur les technologies qu’ils utilisent, mais certains comme <a href="https://www.xml.com/articles/2017/02/20/beyond-xml-making-books-html/">Hachette</a> en parlent publiquement. De vrais livres, vendus à de vrais clients, sans que personne ne s’en rende compte ! Alors, si de grands éditeurs mondiaux utilisent ces technos « pour de vrai », c’est bien que ça doit marcher, non ?
+      </p>
+      <p>
+        Ce n’est d’ailleurs pas le fruit du hasard, et il est temps de faire un peu d’archéologie. Revenons un moment en 1996. Le monde de l’informatique ne jure que par Windows 95, le nouveau système d’exploitation de Microsoft qui n’a même pas de navigateur internet installé par défaut. 90% des internautes (qui ne sont pas bien nombreux) utilisent Netscape, qui va cette année intégrer un langage créé à la hâte en 10 jours : JavaScript.
+      </p>
+      <p>
+        C’est en 1996 qu’est publiée <a href="https://www.w3.org/TR/WD-CSS2-971104/cover.html">la première version de la spécification CSS 2</a>. Dans l’idée de construire un standard ouvert et interopérable, le W3C rédige un document qui sert encore de référence plus de 25 ans après. On trouve dedans une définition claire de la syntaxe, des sélecteurs, et un bon nombre des propriétés de base que l’on utilise encore aujourd’hui. Mais ce n’est pas tout…
+      </p>
+      <p>
+        On y trouve également <a href="https://www.w3.org/TR/WD-CSS2-971104/page.html#h-12.1">un chapitre entier sur la génération de documents paginés</a>.
+      </p>
+      <p>
+        Les créateurs de CSS voient loin et adorent penser en dehors des clous. Le format n’a pas été seulement pensé pour être affiché sur les tubes cathodiques des PC et des Mac de 1996, ni à être uniquement manipulés avec une souris et un clavier. On pense déjà à afficher des pages sur une télévision, sur des écrans Braille, sur des terminaux portables (le premier iPhone sortira plus de 10 ans après), à lire ces pages avec des synthétiseurs vocaux… ou, bien sûr, à imprimer des documents !
+      </p>
+      <p>
+        Si l’idée est louable (et incroyablement visionnaire), elle pose cependant de nombreux problèmes concrets. Découper automatiquement un document web sur plusieurs pages comporte des problématiques spécifiques, et CSS 2 en couvre une partie : forcer ou éviter les coupures de pages, ajouter des marges et y insérer des numéros de pages, définir un format pour l’impression. C’est un bon début, mais ce n’est pas suffisant. Sans que l’on ne s’en rende toujours compte, les tonnes de documents imprimés qui nous entourent chaque jour fourmillent de petits détails dont il faut prendre soin pour atteindre une mise en page de qualité.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Le print en pratique</h2>
+      <p>
+        Alors à quoi ça ressemble de mettre le web en pages ?
+      </p>
+      <p>
+        Lorsque l’on crée un document, que ce soit une lettre, une affiche, un livre…, de nombreuses choses sont à choisir. Comme par exemple le format. Mon document va t-il être en A4, en A6, en 15cm x 24cm, en portrait, en paysage ? C’est quelque chose qui est facilement définissable en CSS, choisissons le format A4.
+      </p>
+      <pre class="language-css" tabindex="0"><code class="language-css">
+        <span class="token atrule"><span class="token rule">@page</span></span> <span class="token punctuation">{</span>
+        <span class="token property">size</span><span class="token punctuation">:</span> A4<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      </code></pre>
+      <p>
+        Le format est choisi et défini ! Avez-vous déjà remarqué que, sur un document de plusieurs pages, les marges ne sont pas les mêmes selon si l’on est sur une page de gauche ou de droite et que les numéros de pages ne sont pas toujours au même endroit ? Ça aussi c’est facilement définissable en CSS.
+      </p>
+      <pre class="language-css" tabindex="0"><code class="language-css">
+        <span class="token atrule"><span class="token rule">@page</span> <span class="token punctuation">:</span>left</span> <span class="token punctuation">{</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token unit">mm</span> <span class="token number">10</span><span class="token unit">mm</span> <span class="token number">20</span><span class="token unit">mm</span> <span class="token number">15</span><span class="token unit">mm</span><span class="token punctuation">;</span>
+        <span class="token atrule"><span class="token rule">@bottom-left</span></span> <span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">counter</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token atrule"><span class="token rule">@page</span> <span class="token punctuation">:</span>right</span> <span class="token punctuation">{</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token unit">mm</span> <span class="token number">15</span><span class="token unit">mm</span> <span class="token number">20</span><span class="token unit">mm</span> <span class="token number">10</span><span class="token unit">mm</span><span class="token punctuation">;</span>
+        <span class="token atrule"><span class="token rule">@bottom-right</span></span> <span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">counter</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      </code></pre>
+      <p>
+        Bref, vous avez saisi l’idée, CSS permet de répondre à des problématiques aussi bien pour du web que pour des documents paginés.
+      </p>
+      <p>
+        Mais CSS permet aussi de répondre à des problèmatiques encore plus spécifiques aux documents 🤯 !
+      </p>
+      <p>
+        Vous voyez les leaders ? Mais si, c’est petits points que l’on trouve dans les tables des matières qui relient le titre d’un chapitre à son numéro de page. Bon ok, c’est pas tout le temps des points, mais vous voyez ? Et bien ça aussi c’est prévu en CSS.
+      </p>
+      <pre class="language-css" tabindex="0"><code class="language-css">
+        <span class="token selector"><span class="token id">#table-of-content</span> a<span class="token pseudo-element">::after</span></span> <span class="token punctuation">{</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">leader</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token string">' '</span> <span class="token function">target-counter</span><span class="token punctuation">(</span><span class="token function">attr</span><span class="token punctuation">(</span>href<span class="token punctuation">)</span><span class="token punctuation">,</span> page<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      </code></pre>
+      <p>
+        Ça peut paraître un peu barbare comme ça.
+      </p>
+      <p>
+        En fait, <code>target-counter()</code> permet de récupérer le numéro de la page à laquelle commence le chapitre. Et <code>leader()</code>, c’est notre star de la table des matières, c’est cette fonction (oui il y a des fonctions en CSS, c’est un vrai langage) qui va permettre de mettre des petits points entre le nom du chapitre et son numéro de page.
+      </p>
+      <p>
+        CSS regorge de plein de fonctions et propriétés qui vont nous aider à créer un document aux petits oignons, comme par exemple la propriété <code>break-inside</code> qui permet de définir si l’on peut couper ou non à l’intérieur d’un bloc, ou encore la at-rule <code>@footnote</code> qui permet de définir la zone où sont écrites les notes de bas de page.
+      </p>
+      <p>
+        En faisant des documents en utilisant du HTML/CSS, vous bénéficiez de toutes ces choses spécifiques aux documents paginés déjà prévues par CSS. Mais aussi vous avez à votre disposition toute la puissance de CSS que vous utilisez déjà pour vos sites, mais ce coup-ci pour personnaliser et designer vos documents !
+      </p>
+      <p>
+        Quitte à mettre des exemples de CSS dans cet article, nous nous en sommes servis pour générer <a href="">cet article en PDF</a> 😄. Si vous voulez voir plus en détails, le CSS est disponible dans <a href="">ce dépôt GitHub</a>.
+      </p>
+    </div>
+    <div class="section">
+      <h2>Les outils pour faire du print</h2>
+      <p>
+        Alors c’est bien beau, on a notre contenu dans du HTML et un style magnifique dans du CSS, mais comment générer un PDF avec ça ?
+      </p>
+      <p>
+        Il existe plusieurs outils différents qui permettent de transformer du HTML/CSS en PDFs. Des outils libres, des outils propriétaires, tous avec leurs forces et leurs faiblesses, mais tous interchangeables car utilisant ces mêmes standards HTML et CSS.
+      </p>
+      <p>
+        Parmi ces outils, le premier que vous pouvez essayer facilement n’est rien d’autre que… votre navigateur.
+      </p>
+      <p>
+        Imprimer vers un document PDF votre document HTML va, sans grande surprise, vous donnez un PDF. Cette solution est très pratique et ne nécessite pas d’installer quoique ce soit sur votre ordinateur.
+      </p>
+      <p>
+        La limitation à la génération de PDF avec votre navigateur préféré va être que, votre navigateur est conçu pour vous permettre de naviguer sur le web. C’est sa fonctionnalité principale. Ce qui fait que les navigateurs n’intègrent pas toutes les propriétés et fonctions CSS spécifiques au print, comme par exemple les notes de bas de page.
+      </p>
+      <p>
+        Des outils propriétaires existent, comme <a href="https://www.princexml.com/">PrinceXML</a>, <a href="https://www.pdfreactor.com/">PDFreactor</a> ou encore <a href="https://www.antennahouse.com/">Antenna House</a>.
+      </p>
+      <p>
+        Ces outils sont généralement assez puissants et solides. Ils intègrent une très grande partie des spécifications CSS propres au print, et même davantage (ce qui pourrait faire l’objet d’un autre article).
+      </p>
+      <p>
+        En dehors du fait d’être des logiciels propriétaires, un des points qui peut freiner à l’adoption de ses outils est leur prix. Comptez 3800$ pour une licence PrinceXML, 2680€ pour une licence PDFreactor et 2675$ pour une licence AntennaHouse.
+      </p>
+      <p>
+        Ces prix sont donnés à titre indicatifs. Il s’agit du prix d’une licence unique pour un serveur sur une année, mais après ça va dépendre de votre serveur, du nombres de documents que vous générez, du nombres de pages… bref, c’est indicatif.
+      </p>
+      <p>
+        Et enfin, les outils libre et open source !
+      </p>
+      <p>
+        Parmi ces outils, on peut citer <a href="https://pagedjs.org/">PagedJS</a> (👋), <a href="https://vivliostyle.org/">Vivliostyle</a> et <a href="https://weasyprint.org/">WeasyPrint</a> (ça c’est nous).
+      </p>
+      <p>
+        PagedJS est une bibliothèque JavaScript, qui en plus de transformer votre HTML/CSS en PDF vous permet de voir le rendu de votre document en direct dans le navigateur.
+      </p>
+      <p>
+        Vivliostyle est lui en TypeScript, utilisable en ligne de commande directement depuis votre terminal et vous permet de prévisualiser également votre PDF. Mention spéciale pour Vivliostyle qui gère particulièrement bien l’écriture de droite à gauche et de haut en bas (et oui, il y a aussi ça à prendre en compte quand on fait des documents).
+      </p>
+      <p>
+        Quand à WeasyPrint que nous développons, il s’agit d’une bibliothèque Python qui s’utilise directement en ligne de commande ou que vous pouvez appeler depuis votre application Python.
+      </p>
+      <p>
+        Si vous voulez voir ce que sont capables de générer ces outils, n’hésitez pas à jeter un œil aux:
+      </p>
+      <ul>
+        <li><a href="https://pagedjs.org/made-with-paged.js.html">livres créés avec PagedJS</a>;</li>
+        <li><a href="https://vivliostyle.org/samples/">livres et magasines créés avec Vivliostyle</a>;</li>
+        <li><a href="https://weasyprint.org/#samples">livres, rapport, lettres et autres créés avec WeasyPrint</a>.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>La diversité du web</h2>
+      <p>
+        La création de documents PDF avec les technologies du web est une niche, certes, mais elle fourmille d’outils, d’idées, de solutions. Les personnes qui touchent de près ou de loin à ce microcosme partagent parfois des valeurs et des envies, et confrontent parfois avec véhémence leurs points de vue antagonistes. Tout le monde n’est pas d’accord, bien évidemment 😁, mais au moins les choses avancent grâce à l’implication des personnes derrière les standards, des développeurs d’outils et de leurs utilisateurs.
+      </p>
+      <p>
+        Ce monde qui fourmille, c’est le monde du web tel que nous le connaissons… tout du moins à présent. Les plus anciennes et les plus anciens d’entre vous se rappellent sans aucun doute les heures sombres du web du début des années 2000, avec Internet Explorer 6 et ses 90% de parts de marché, qui n’avait que faire de l’interopérabilité et de l’innovation comme tout ogre omnipotent qui se respecte.
+      </p>
+      <p>
+        La position actuelle de Chrome, qui se rapproche chaque jour un peu plus d’une situation quasi-monopolistique, pourrait replonger à court ou moyen terme un écosystème connu pour être (un peu trop ?) innovant dans la torpeur et les contraintes imposées par despote. Google prend de moins en moins de pincettes pour pousser dans son navigateur des outils de surveillance et pour favoriser la publicité en ligne. L’entreprise ne le fait pas par pure méchanceté, elle le fait pour une raison simple : accroître ses revenues. Alors qu’un relatif équilibre avait été trouvé avec les autres implémentations, les tendances actuelles (désamour pour Firefox, utilisation du moteur de rendu de Chrome par Edge et Opera) laissent à penser que le rapport de force n’existe plus vraiment pour contrer l’agenda assumé du moteur de recherche.
+      </p>
+      <p>
+        Face à cela, il nous semble important de continuer à jouer le jeu de l’interopérabilité. Le web, et internet en général, fonctionnent grâce à de nombreux outils qui parlent tous les mêmes langages et formats : TCP/IP, HTTP, HTML, CSS, JavaScript… Une des forces de ces langages réside dans leurs multiples implémentations : que vous fassiez un site statique, une API REST, un <em>scraper</em>, une web app ou un service de streaming, vous allez pouvoir choisir les langages que vous aimez et les outils que vous préférez. Tout cela est possible parce que ces technologies sont le fruit de consensus au sein de consortiums, qui tentent de privilégier au mieux l’intérêt des usagers sur l’intérêt des acteurs privés ou publics. <strong>Et au final, pour nous, participer aux consensus en développant cet usage alternatif, c’est une manière modeste mais sincère de faire vivre le web ouvert.</strong>
+      </p>
+      <p>
+        Nous sommes Lucie et Guillaume, et comme beaucoup de gens nous travaillons tous les jours avec les technologies du web. Nous aimerions que cela continue longtemps, nous aimerions pouvoir encore et encore inventer et mettre en pages nos contenus, indépendamment des volontés de gros acteurs dont nous ne partageons pas forcément les valeurs. Alors, à notre toute petite échelle, avec nos jolis documents débordant de belles lettres et de couleurs harmonieuses, avec nos outils libres et nos standards ouverts, avec notre passion et notre bonne humeur, nous tentons de faire vivre cette diversité du web 🌱.
+      </p>
+    </div>
+  </div>
+  <footer class="post-footer">
+    <div class="post-author">
+      <div class="post-author-avatar">
+	<img alt="Lucie Anglade et Guillaume Ayoub" src="https://secure.gravatar.com/avatar/59a1678631170a0211c11fbee3b77dc7?s=150&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/59a1678631170a0211c11fbee3b77dc7?s=300&amp;d=mm&amp;r=g 2x" class="avatar avatar-150 photo" width="150" height="150">			</div>
+	<div class="post-author-text">
+	  <div class="post-author-text-content">
+	    <h2 class="post-author-title">À propos de Lucie Anglade et Guillaume Ayoub</h2>
+	    <p class="post-author-description"></p>
+	  </div>
+	</div>
+    </div>
+  </footer>
+</article>
